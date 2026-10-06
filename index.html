@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tofei Team Forst | Amenajări Păduri & Grădinărit Maramureș</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Tofei Team Forst - Servicii profesionale de amenajări silvice, curățare păduri, defrișări controlate, amenajări grădini și peisagistică în Poienile de sub Munte, Maramureș. Contact: Țofei Dumitru, Țofei Ionuț, Alin Țofei (Maistru & Șef de Echipă) - 0734 189 808 / WhatsApp: 0769 387 034.">
+    <meta name="keywords" content="Tofei Team Forst, amenajare paduri Maramures, defrisari paduri, curatare silvica, gradinarit Poienile de sub Munte, peisagistica, Tofei Dumitru, Tofei Ionut, Alin Tofei">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #1E3A2B;      /* Verde Brad Deep */
+            --primary-light: #2A4E3B;
+            --secondary: #7A9A80;    /* Verde Salvie */
+            --accent: #D4A373;       /* Chihlimbar Solar */
+            --accent-hover: #C28E5C;
+            --dark: #4A3B32;         /* Maro Pământiu Bark */
+            --bg-light: #F8F6F0;     /* Alb Cald Sand */
+            --text-dark: #2C3531;
+            --text-muted: #5A6560;
+            --white: #FFFFFF;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- TOP BAR --- */
+        .top-bar {
+            background-color: var(--primary);
+            color: rgba(255,255,255,0.9);
+            font-size: 0.88rem;
+            padding: 8px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .top-info span {
+            margin-right: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .top-info i {
+            color: var(--accent);
+        }
+
+        .top-badge {
+            background: rgba(212, 163, 115, 0.2);
+            color: var(--accent);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* --- HEADER & NAVBAR --- */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background-color: var(--primary);
+            color: var(--accent);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .logo-text h2 {
+            font-size: 1.35rem;
+            line-height: 1;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            font-size: 0.75rem;
+            color: var(--secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.92rem;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .btn-cta {
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(212, 163, 115, 0.3);
+        }
+
+        .btn-cta:hover {
+            background-color: var(--accent-hover);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(30,58,43,0.92) 0%, rgba(74,59,50,0.85) 100%), 
+                        url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: #fff;
+            padding: 120px 5% 100px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(212, 163, 115, 0.25);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: 3.1rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 35px;
+            line-height: 1.6;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-secondary:hover {
+            background-color: #fff;
+            color: var(--primary);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(8px);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .stat-item h3 {
+            color: var(--accent);
+            font-size: 2rem;
+            margin-bottom: 4px;
+        }
+
+        .stat-item p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        /* --- SECTION LAYOUT --- */
+        section {
+            padding: 90px 5%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .section-subtitle {
+            color: var(--secondary);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        /* --- DUAL SERVICES SECTION --- */
+        .services-switch {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .switch-btn {
+            padding: 12px 28px;
+            border-radius: 30px;
+            border: 2px solid var(--secondary);
+            background: transparent;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .switch-btn.active, .switch-btn:hover {
+            background-color: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--secondary);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-top-color: var(--accent);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(122, 154, 128, 0.15);
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .service-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .service-list li {
+            font-size: 0.88rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .service-list li i {
+            color: var(--secondary);
+        }
+
+        /* --- UTILAJE SECTION --- */
+        .equipment-section {
+            background-color: #1E3A2B;
+            color: #fff;
+            border-radius: 16px;
+            padding: 60px 40px;
+            margin: 60px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .equipment-card {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 25px;
+            transition: var(--transition);
+        }
+
+        .equipment-card:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-5px);
+        }
+
+        .equipment-card i {
+            font-size: 2.2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .equipment-card h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .equipment-card p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* --- BEFORE / AFTER SLIDER WIDGET --- */
+        .before-after-section {
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 50px 40px;
+            box-shadow: var(--shadow);
+            margin: 40px auto;
+        }
+
+        .ba-container {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            user-select: none;
+        }
+
+        .ba-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ba-after {
+            background-image: url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=80');
+        }
+
+        .ba-before {
+            background-image: url('https://images.unsplash.com/photo-1511497584788-8767611136f6?auto=format&fit=crop&w=1200&q=80');
+            width: 50%;
+            border-right: 3px solid var(--accent);
+        }
+
+        .ba-label {
+            position: absolute;
+            top: 15px;
+            padding: 6px 14px;
+            background: rgba(0,0,0,0.65);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .ba-before .ba-label { left: 15px; }
+        .ba-after .ba-label { right: 15px; }
+
+        .ba-slider-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: ew-resize;
+            z-index: 10;
+        }
+
+        .ba-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        /* --- CALCULATOR INTERACTIV --- */
+        .calculator-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 850px) {
+            .calculator-card { grid-template-columns: 1fr; }
+        }
+
+        .calc-form h3 {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .calc-form p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .calc-group {
+            margin-bottom: 20px;
+        }
+
+        .calc-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .calc-select, .calc-range {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .calc-select option {
+            background-color: var(--primary);
+            color: #fff;
+        }
+
+        .range-val {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 700;
+            margin-top: 5px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.88rem;
+            cursor: pointer;
+        }
+
+        .calc-result-box {
+            background: rgba(255,255,255,0.08);
+            border: 1px dashed var(--accent);
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .calc-price-display {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin: 15px 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .calc-price-note {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 25px;
+        }
+
+        /* --- PORTOFOLIU & GALERIE --- */
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 18px;
+            border-radius: 20px;
+            border: none;
+            background-color: #EAE6DF;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--primary);
+            color: #fff;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 250px;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(30,58,43,0.95), transparent 70%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            color: #fff;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-overlay h4 {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .portfolio-overlay p {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* --- TESTIMONIALE --- */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .testimonial-card i.quote {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            opacity: 0.4;
+        }
+
+        .testimonial-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author h5 {
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .testimonial-author span {
+            font-size: 0.82rem;
+            color: var(--secondary);
+        }
+
+        /* --- ABOUT US / ECHIPĂ --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media (max-width: 850px) {
+            .about-grid { grid-template-columns: 1fr; }
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-badge-maramures {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(30,58,43,0.9);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            border-left: 4px solid var(--accent);
+        }
+
+        .about-badge-maramures h4 {
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        .team-contacts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #E2DED5;
+        }
+
+        .team-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border-left: 3px solid var(--secondary);
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            border-left-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .team-card h4 {
+            font-size: 0.95rem;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .team-card p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .team-card .role-badge {
+            display: inline-block;
+            background: rgba(122, 154, 128, 0.15);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-top: 6px;
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        @media (max-width: 850px) {
+            .contact-container { grid-template-columns: 1fr; }
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .info-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            background-color: rgba(122, 154, 128, 0.15);
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .info-text h4 {
+            font-size: 0.98rem;
+            margin-bottom: 3px;
+        }
+
+        .info-text p, .info-text a {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+
+        .info-text a:hover {
+            color: var(--accent);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        @media (max-width: 500px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #D1CDC4;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(30,58,43,0.1);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--primary);
+            color: rgba(255,255,255,0.8);
+            padding: 60px 5% 30px;
+        }
+
+        .footer-grid {
+            max-width: 1300px;
+            margin: 0 auto 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* --- FLOATING ACTION BUTTON --- */
+        .floating-action {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-float {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            transition: var(--transition);
+        }
+
+        .btn-float.whatsapp { background-color: #25D366; }
+        .btn-float.phone { background-color: var(--primary); }
+
+        .btn-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Mobile Adjustments */
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: #fff;
+                flex-direction: column;
+                padding: 40px 5%;
+                transition: var(--transition);
+                box-shadow: var(--shadow);
+            }
+            .nav-links.active { left: 0; }
+            .mobile-toggle { display: block; }
+            .ba-container { height: 280px; }
+            .btn-cta { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR DE CONTACT -->
+    <div class="top-bar">
+        <div class="top-info">
+            <span><i class="fa-solid fa-location-dot"></i> Poienile de sub Munte, Maramureș (Disponibili Național)</span>
+            <span><i class="fa-solid fa-phone"></i> <a href="tel:0734189808" style="color:inherit;">0734 189 808</a></span>
+            <span><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/40769387034" target="_blank" style="color:inherit;">WhatsApp: 0769 387 034</a></span>
+        </div>
+        <div>
+            <span class="top-badge"><i class="fa-solid fa-shield-halved"></i> Echipă Autorizată & Utilaje Profesionale</span>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-tree"></i></div>
+                <div class="logo-text">
+                    <h2>TOFEI TEAM FORST</h2>
+                    <span>Amenajări Silvice & Grădini</span>
+                </div>
+            </a>
+
+            <div class="mobile-toggle" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#servicii">Servicii</a></li>
+                <li><a href="#utilaje">Utilaje</a></li>
+                <li><a href="#transformare">Înainte & După</a></li>
+                <li><a href="#calculator">Estimator</a></li>
+                <li><a href="#portofoliu">Portofoliu</a></li>
+                <li><a href="#despre">Despre Noi</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="tel:0734189808" class="btn-cta">
+                        <i class="fa-solid fa-phone"></i> 0734 189 808
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag"><i class="fa-solid fa-mountain"></i> Expertiză în Inima Maramureșului</span>
+            <h1>Pasionați de Păduri, Experți în Grădini și Peisagistică</h1>
+            <p>De la curățarea și igienizarea fondului forestier până la proiectarea și amenajarea grădinilor de vis. Executăm lucrări de înaltă calitate în Maramureș și în întreaga țară.</p>
+            
+            <div class="hero-buttons">
+                <a href="#calculator" class="btn-cta" style="padding: 12px 28px; font-size: 1rem;">
+                    <i class="fa-solid fa-calculator"></i> Calculează Estimare Rapidă
+                </a>
+                <a href="#contact" class="btn-secondary">
+                    <i class="fa-solid fa-calendar-check"></i> Solicită Evaluare Teren
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>10+ Ani</h3>
+                    <p>Experiență pe Teren</p>
+                </div>
+                <div class="stat-item">
+                    <h3>250+</h3>
+                    <p>Terenuri Curățate & Amenajate</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Echipamente Profesionale</p>
+                </div>
+                <div class="stat-item">
+                    <h3>MM / Național</h3>
+                    <p>Baza: Poienile de sub Munte</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICII DUAL CORE -->
+    <section id="servicii">
+        <div class="section-header">
+            <span class="section-subtitle">Ce Vă Oferim</span>
+            <h2 class="section-title">Serviciile Noastre Principale</h2>
+            <p class="section-desc">Echipa Tofei Team Forst combină forța echipamentelor silvice grele cu atenția la detalii necesară peisagisticii moderne.</p>
+        </div>
+
+        <div class="services-switch">
+            <button class="switch-btn active" onclick="switchCategory('all')">
+                <i class="fa-solid fa-layer-group"></i> Toate Serviciile
+            </button>
+            <button class="switch-btn" onclick="switchCategory('silvic')">
+                <i class="fa-solid fa-tree"></i> Amenajări Păduri (Silvicultură)
+            </button>
+            <button class="switch-btn" onclick="switchCategory('gradini')">
+                <i class="fa-solid fa-leaf"></i> Grădinărit & Peisagistică
+            </button>
+        </div>
+
+        <div class="services-grid" id="servicesGrid">
+            <!-- Card 1 -->
+            <div class="service-card" data-type="silvic">
+                <div class="service-icon"><i class="fa-solid fa-tree"></i></div>
+                <h3>Curățare & Igienizare Păduri</h3>
+                <p>Curățăm și cosmetizăm terenurile forestiere sălbatice, îndepărtând doborâturile de vânt, uscătura și vegetația parazită.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> Elagaj și cosmetizare arbori</li>
+                    <li><i class="fa-solid fa-check"></i> Tocare resturi vegetale</li>
+                    <li><i class="fa-solid fa-check"></i> Protecție fond forestier</li>
+                </ul>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="service-card" data-type="silvic">
+                <div class="service-icon"><i class="fa-solid fa-tractor"></i></div>
+                <h3>Defrișări Controlate & Curățare Teren</h3>
+                <p>Pregătim terenul pentru construcții, livezi sau noi plantații, îndepărtând lăstărișul gros, mărăcinișul și cioatele.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> Defrișări vegetație densă</li>
+                    <li><i class="fa-solid fa-check"></i> Scoatere cioate & nivelare</li>
+                    <li><i class="fa-solid fa-check"></i> Acces utilaje pe teren dificil</li>
+                </ul>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="service-card" data-type="silvic">
+                <div class="service-icon"><i class="fa-solid fa-seedling"></i></div>
+                <h3>Reîmpăduriri & Plantări Silvice</h3>
+                <p>Executăm lucrări de împădurire cu puieți din specii adecvate zonei (molid, fag, brad, stejar), asigurând rata înaltă de prindere.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> Pregătirea vetrelor de plantare</li>
+                    <li><i class="fa-solid fa-check"></i> Plantare puieți forestieri</li>
+                    <li><i class="fa-solid fa-check"></i> Revizuire și completare puieți</li>
+                </ul>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="service-card" data-type="gradini">
+                <div class="service-icon"><i class="fa-solid fa-spa"></i></div>
+                <h3>Proiectare & Amenajare Grădini</h3>
+                <p>Transformăm curtea dumneavoastră într-o oază de verdeață prin modelare de teren, alegerea plantelor ornamentale și decor cu piatră.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> Amenajare iazuri și cascade</li>
+                    <li><i class="fa-solid fa-check"></i> Plantare gard viu și arbuști</li>
+                    <li><i class="fa-solid fa-check"></i> Alei ecologice din piatră</li>
+                </ul>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="service-card" data-type="gradini">
+                <div class="service-icon"><i class="fa-solid fa-border-all"></i></div>
+                <h3>Montaj Rulouri Gazon & Însămânțare</h3>
+                <p>Obțineți un gazon verde, des și rezistent într-o singură zi cu rulouri de gazon de calitate superioară sau prin însămânțare.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> Pregătire & erbicidare sol</li>
+                    <li><i class="fa-solid fa-check"></i> Pregătire strat de nisip/pământ</li>
+                    <li><i class="fa-solid fa-check"></i> Tăvălugire și fertilizare inițială</li>
+                </ul>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="service-card" data-type="gradini">
+                <div class="service-icon"><i class="fa-solid fa-droplet"></i></div>
+                <h3>Sisteme de Irigații Automate</h3>
+                <p>Instalăm sisteme inteligente de irigații prin picurare și aspersiune cu senzori de ploaie pentru o grădină mereu hidratată.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> Proiectare trasee electrovalve</li>
+                    <li><i class="fa-solid fa-check"></i> Programatoare inteligente RainBird/Hunter</li>
+                    <li><i class="fa-solid fa-check"></i> Conservare apă & consum optim</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECȚIUNE UTILAJE ȘI ECHIPAMENTE -->
+    <section id="utilaje" style="padding-top: 0;">
+        <div class="equipment-section">
+            <div class="section-header" style="margin-bottom: 20px;">
+                <span class="section-subtitle" style="color:var(--accent);">Dotări Tehnice</span>
+                <h2 class="section-title" style="color:#fff;">Utilaje Profesionale pentru Orice Teren</h2>
+                <p class="section-desc" style="color:rgba(255,255,255,0.8);">Investim continuu în echipamente de top pentru a garanta siguranță, eficiență și un timp de execuție redus pe șantier.</p>
+            </div>
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <i class="fa-solid fa-truck-monster"></i>
+                    <h4>Tractoare Forestiere & Utilaje Grele</h4>
+                    <p>Capabile să acționeze în zone montane și pe terenuri greu accesibile pentru extragere și curățare.</p>
+                </div>
+                <div class="equipment-card">
+                    <i class="fa-solid fa-gear"></i>
+                    <h4>Tocătoare de Crengi & Lăstăriș</h4>
+                    <p>Transformă rapid resturile vegetale în mulci sau biomasă direct la fața locului.</p>
+                </div>
+                <div class="equipment-card">
+                    <i class="fa-solid fa-tools"></i>
+                    <h4>Echipamente Profesionale de Tăiere</h4>
+                    <p>Drujbe performante și unelte specializate pentru toaletare sigură și controlată.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEFORE AND AFTER SLIDER WIDGET -->
+    <section id="transformare" style="padding-top: 0;">
+        <div class="section-header">
+            <span class="section-subtitle">Rezultate Vizibile</span>
+            <h2 class="section-title">Transformarea Terenului (Înainte & După)</h2>
+            <p class="section-desc">Glisați cursorul stânga-dreapta pentru a vedea cum transformăm un teren sălbatic și neglijat într-o suprafață perfect curățată și amenajată.</p>
+        </div>
+
+        <div class="before-after-section">
+            <div class="ba-container" id="baContainer">
+                <div class="ba-img ba-after">
+                    <span class="ba-label">DUPĂ (Curățat & Amenajat)</span>
+                </div>
+                <div class="ba-img ba-before" id="baBefore">
+                    <span class="ba-label">ÎNAINTE (Lăstăriș / Sălbatic)</span>
+                </div>
+                <div class="ba-handle" id="baHandle">
+                    <i class="fa-solid fa-arrows-left-right"></i>
+                </div>
+                <input type="range" min="0" max="100" value="50" class="ba-slider-input" id="baSlider">
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULATOR DE COST INTERACTIV -->
+    <section id="calculator">
+        <div class="calculator-card">
+            <div class="calc-form">
+                <h3><i class="fa-solid fa-calculator"></i> Estimator Rapid de Cost</h3>
+                <p>Selectați parametrii terenului pentru a primi o estimare aproximativă pe loc.</p>
+
+                <div class="calc-group">
+                    <label>Tip Lucrare Principală:</label>
+                    <select class="calc-select" id="calcType" onchange="calculateEstimate()">
+                        <option value="defrisare">Curățare Teren / Defrișare Lăstăriș</option>
+                        <option value="silvic">Igienizare Fond Forestier / Pădure</option>
+                        <option value="gazon">Pregătire & Montaj Gazon Rulou</option>
+                        <option value="peisagistica">Amenajare Grădină Completă</option>
+                    </select>
+                </div>
+
+                <div class="calc-group">
+                    <label>Suprafață Teren (mp):</label>
+                    <input type="range" min="100" max="10000" step="100" value="1000" class="calc-range" id="calcArea" oninput="calculateEstimate()">
+                    <div class="range-val"><span id="calcAreaVal">1.000</span> mp</div>
+                </div>
+
+                <div class="calc-group">
+                    <label>Factori de Complexitate:</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="checkSlope" onchange="calculateEstimate()"> Teren în pantă sau acces dificil (+20%)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="checkDebris" onchange="calculateEstimate()"> Tocare & evacuare resturi vegetale (+15%)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="checkStumps" onchange="calculateEstimate()"> Scoatere cioate mari / piatră (+25%)
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-result-box">
+                <span style="font-size:0.9rem; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,0.8);">Estimare Valoare Lucrare:</span>
+                <div class="calc-price-display" id="calcPrice">2.500 - 3.200 RON</div>
+                <p class="calc-price-note">* Prețul final exact se stabilește după evaluarea gratuită a terenului de către echipa noastră.</p>
+                
+                <button onclick="applyCalcToForm()" class="btn-cta" style="width: 100%; justify-content: center;">
+                    <i class="fa-solid fa-paper-plane"></i> Solicită Ofertă pentru acest Calcul
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTOFOLIU SI GALERIE -->
+    <section id="portofoliu">
+        <div class="section-header">
+            <span class="section-subtitle">Proiecte Recente</span>
+            <h2 class="section-title">Portofoliu Tofei Team Forst</h2>
+            <p class="section-desc">Câteva imagini reprezentative din lucrările noastre de amenajări silvice și peisagistică.</p>
+        </div>
+
+        <div class="portfolio-filters">
+            <button class="filter-btn active" onclick="filterPortfolio('all')">Toate</button>
+            <button class="filter-btn" onclick="filterPortfolio('paduri')">Curățare Păduri</button>
+            <button class="filter-btn" onclick="filterPortfolio('gradini')">Amenajare Grădini</button>
+            <button class="filter-btn" onclick="filterPortfolio('utilaje')">Echipamente & Lucru</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-cat="paduri">
+                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80" alt="Igienizare Pădure">
+                <div class="portfolio-overlay">
+                    <h4>Igienizare Fond Forestier</h4>
+                    <p>Poienile de sub Munte, Maramureș</p>
+                </div>
+            </div>
+            <div class="portfolio-item" data-cat="gradini">
+                <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=600&q=80" alt="Gazon Rulou">
+                <div class="portfolio-overlay">
+                    <h4>Montaj Rulouri Gazon & Irigații</h4>
+                    <p>Proprietate Privată</p>
+                </div>
+            </div>
+            <div class="portfolio-item" data-cat="paduri">
+                <img src="https://images.unsplash.com/photo-1511497584788-8767611136f6?auto=format&fit=crop&w=600&q=80" alt="Defrișare Lăstăriș">
+                <div class="portfolio-overlay">
+                    <h4>Defrișare & Pregătire Teren</h4>
+                    <p>Suprafață 2.5 Hectare</p>
+                </div>
+            </div>
+            <div class="portfolio-item" data-cat="utilaje">
+                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" alt="Utilaje Profesionale">
+                <div class="portfolio-overlay">
+                    <h4>Utilaje de Tocat & Defrișat</h4>
+                    <p>Echipamente Profesionale Tofei Team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALE -->
+    <section style="background-color: #F0EDE6; padding: 70px 5%;">
+        <div class="section-header" style="margin-bottom: 30px;">
+            <span class="section-subtitle">Ce spun clienții</span>
+            <h2 class="section-title">Păreri de la Beneficiari</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <i class="fa-solid fa-quote-left quote"></i>
+                <p>„O echipă extrem de serioasă și punctuală. Au curățat un teren plin de lăstăriș și arbori căzuți în timp record. Recomand cu mare drag!”</p>
+                <div class="testimonial-author">
+                    <h5>Vasile M.</h5>
+                    <span>Proprietar teren, Maramureș</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <i class="fa-solid fa-quote-left quote"></i>
+                <p>„Alin și echipa au transformat curtea noastră complet. Montajul gazonului și sistemul de irigații funcționează perfect după doi ani.”</p>
+                <div class="testimonial-author">
+                    <h5>Ioan P.</h5>
+                    <span>Beneficiar Amenajare Grădină</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <i class="fa-solid fa-quote-left quote"></i>
+                <p>„Profesioniști desăvârșiți. Au utilaje puternice și știu exact cum să gestioneze defrișările controlate în siguranță.”</p>
+                <div class="testimonial-author">
+                    <h5>Gheorghe T.</h5>
+                    <span>Cluj-Napoca</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESPRE NOI SI ECHIPA -->
+    <section id="despre">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80" alt="Pădure Maramureș">
+                <div class="about-badge-maramures">
+                    <h4>Tofei Team Forst SRL</h4>
+                    <p>Sediul: Poienile de sub Munte, Maramureș</p>
+                </div>
+            </div>
+
+            <div class="about-text">
+                <span class="section-subtitle">Tradiție & Seriozitate</span>
+                <h2 class="section-title">Echipa Noastră de Specialisti</h2>
+                <p class="section-desc" style="margin-bottom: 20px;">
+                    Suntem o firmă cu rădăcini adânci în Maramureș, specializată în lucrări silvice complexe și amenajări peisagistice. Combinăm experiența practică pe teren cu dotări tehnice moderne.
+                </p>
+                <p class="section-desc">
+                    Echipa noastră reunește experiența în domeniu sub coordonarea directă a membrilor familiei:
+                </p>
+
+                <div class="team-contacts">
+                    <div class="team-card">
+                        <h4><i class="fa-solid fa-user-check"></i> Țofei Dumitru</h4>
+                        <p>Coordonator & Relații Clienți</p>
+                    </div>
+                    <div class="team-card">
+                        <h4><i class="fa-solid fa-user-check"></i> Țofei Ionuț</h4>
+                        <p>Coordonator Amenajări Peisagistice</p>
+                    </div>
+                    <div class="team-card">
+                        <h4><i class="fa-solid fa-hard-hat"></i> Alin Țofei</h4>
+                        <p>Maistru & Șef de Echipă</p>
+                        <span class="role-badge">Coordonator Teren</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="section-header">
+            <span class="section-subtitle">Intră în Legătură</span>
+            <h2 class="section-title">Solicită o Evaluare de Teren</h2>
+            <p class="section-desc">Sunați-ne direct sau trimiteți un mesaj pe WhatsApp ori prin formular pentru a stabili o vizită la terenul dumneavoastră.</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Date de Contact Oficiale</h3>
+                <p style="color:var(--text-muted); font-size:0.95rem;">Răspundem rapid la telefon și WhatsApp în maxim 24 de ore.</p>
+
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="info-text">
+                        <h4>Telefon Direct:</h4>
+                        <p><a href="tel:0734189808" style="font-weight:700; color:var(--primary); font-size:1.1rem;">0734 189 808</a></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-brands fa-whatsapp" style="color:#25D366; font-size:1.4rem;"></i></div>
+                    <div class="info-text">
+                        <h4>WhatsApp Direct:</h4>
+                        <p><a href="https://wa.me/40769387034?text=Buna%20ziua,%20doresc%20o%20estimare%20de%20pret%20pentru%20un%20teren." target="_blank" style="font-weight:700; color:#25D366; font-size:1.1rem;">0769 387 034</a></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="info-text">
+                        <h4>Adresă E-mail:</h4>
+                        <p><a href="mailto:ttfromania034@gmail.com">ttfromania034@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="info-text">
+                        <h4>Sediul Firmei:</h4>
+                        <p>Poienile de sub Munte, Județul Maramureș<br><span style="font-size: 0.85rem; color:var(--secondary);">*Ne deplasăm în întreaga țară pentru proiecte ample</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formular legat prin Formspree pentru a trimite email real -->
+            <form class="contact-form" action="https://formspree.io/f/xyzkrwyz" method="POST">
+                <h3>Trimite-ne un Mesaj</h3>
+                
+                <div class="form-row">
+                    <input type="text" name="nume" class="form-control" placeholder="Numele dumneavoastră *" required>
+                    <input type="tel" name="telefon" class="form-control" placeholder="Număr de Telefon *" required>
+                </div>
+
+                <div class="form-row">
+                    <input type="email" name="email" class="form-control" placeholder="Adresă de E-mail">
+                    <input type="text" name="locatie" class="form-control" placeholder="Localitate / Județ Teren">
+                </div>
+
+                <textarea name="mesaj" id="formMessage" class="form-control" placeholder="Descrieți lucrarea (ex: curățare teren 1000 mp, defrișare lăstăriș, montaj gazon etc.) *" required></textarea>
+
+                <button type="submit" class="btn-cta" style="justify-content: center; padding: 14px; border:none; cursor:pointer;">
+                    <i class="fa-solid fa-paper-plane"></i> Trimite Solicitarea către Tofei Team
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>TOFEI TEAM FORST</h4>
+                <p style="font-size:0.9rem; line-height:1.6; color:rgba(255,255,255,0.7);">
+                    Firma dumneavoastră de încredere pentru amenajări de păduri, curățare silvică, defrișări și grădinărit peisagistic în Maramureș și în toată țara.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Servicii Rapide</h4>
+                <ul class="footer-links">
+                    <li><a href="#servicii">Curățare Păduri</a></li>
+                    <li><a href="#servicii">Defrișări Lăstăriș</a></li>
+                    <li><a href="#servicii">Montaj Gazon Rulou</a></li>
+                    <li><a href="#servicii">Irigații Automate</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Date Identificare</h4>
+                <p style="font-size:0.88rem; line-height:1.6;">
+                    <strong>Echipă:</strong> Țofei Dumitru, Țofei Ionuț, Alin Țofei<br>
+                    <strong>Telefon:</strong> 0734 189 808<br>
+                    <strong>WhatsApp:</strong> 0769 387 034<br>
+                    <strong>E-mail:</strong> ttfromania034@gmail.com<br>
+                    <strong>Locație:</strong> Poienile de sub Munte, Maramureș
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tofei Team Forst SRL. Toate drepturile rezervate.</p>
+            <p>Conceput pentru Tofei Team - Poienile de sub Munte, Maramureș</p>
+        </div>
+    </footer>
+
+    <!-- BUTOANE PLUTITOARE PENTRU MOBIL -->
+    <div class="floating-action">
+        <a href="https://wa.me/40769387034?text=Buna%20ziua,%20doresc%20o%20estimare%20de%20pret%20pentru%20un%20teren." target="_blank" class="btn-float whatsapp" title="Scrie-ne pe WhatsApp (0769 387 034)">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:0734189808" class="btn-float phone" title="Apelează Acum (0734 189 808)">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Meniu Mobil
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Filtru Categorii Servicii
+        function switchCategory(cat) {
+            document.querySelectorAll('.switch-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            const cards = document.querySelectorAll('.service-card');
+            cards.forEach(card => {
+                if(cat === 'all' || card.dataset.type === cat) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Before After Slider Logic
+        const baSlider = document.getElementById('baSlider');
+        const baBefore = document.getElementById('baBefore');
+        const baHandle = document.getElementById('baHandle');
+
+        baSlider.addEventListener('input', (e) => {
+            const val = e.target.value;
+            baBefore.style.width = `${val}%`;
+            baHandle.style.left = `${val}%`;
+        });
+
+        // Calculator Logic
+        function calculateEstimate() {
+            const type = document.getElementById('calcType').value;
+            const area = parseInt(document.getElementById('calcArea').value);
+            document.getElementById('calcAreaVal').innerText = area.toLocaleString('ro-RO');
+
+            let basePricePerSqm = 2.5; 
+
+            if(type === 'defrisare') basePricePerSqm = 2.2;
+            if(type === 'silvic') basePricePerSqm = 3.0;
+            if(type === 'gazon') basePricePerSqm = 18.0;
+            if(type === 'peisagistica') basePricePerSqm = 25.0;
+
+            let total = area * basePricePerSqm;
+
+            if(document.getElementById('checkSlope').checked) total *= 1.20;
+            if(document.getElementById('checkDebris').checked) total *= 1.15;
+            if(document.getElementById('checkStumps').checked) total *= 1.25;
+
+            const minTotal = Math.round(total * 0.9);
+            const maxTotal = Math.round(total * 1.15);
+
+            document.getElementById('calcPrice').innerText = `${minTotal.toLocaleString('ro-RO')} - ${maxTotal.toLocaleString('ro-RO')} RON`;
+        }
+
+        function applyCalcToForm() {
+            const typeSelect = document.getElementById('calcType');
+            const typeText = typeSelect.options[typeSelect.selectedIndex].text;
+            const area = document.getElementById('calcArea').value;
+            const price = document.getElementById('calcPrice').innerText;
+
+            const messageBox = document.getElementById('formMessage');
+            messageBox.value = `Doresc ofertă pentru lucrarea: "${typeText}" pe o suprafață de ${area} mp. Estimare calculator site: ${price}.`;
+            
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Portofoliu Filtering
+        function filterPortfolio(cat) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            const items = document.querySelectorAll('.portfolio-item');
+            items.forEach(item => {
+                if(cat === 'all' || item.dataset.cat === cat) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        calculateEstimate();
+    </script>
+</body>
+</html>
